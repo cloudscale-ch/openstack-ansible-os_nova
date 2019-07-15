@@ -29,6 +29,7 @@ nova_devel_distro_packages:
   - libxml2-devel
   - postgresql-devel
   - python-httplib2
+  - systemd-devel
   - which
 
 nova_service_distro_packages:
@@ -42,6 +43,7 @@ nova_service_distro_packages:
   - python2-PyMySQL
   - uwsgi
   - uwsgi-plugin-python
+  - systemd-python
 
 nova_service_extra_distro_packages:
   kvm:
