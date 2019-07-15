@@ -32,6 +32,7 @@ nova_devel_distro_packages:
   - postgresql-devel
   - python-httplib2
   - which
+  - systemd-devel
 
 nova_service_distro_packages:
   - openstack-nova-api
@@ -41,6 +42,7 @@ nova_service_distro_packages:
   - python-memcached
   - python-novaclient
   - python-PyMySQL
+  - python-systemd
 
 nova_service_extra_distro_packages:
   kvm:
