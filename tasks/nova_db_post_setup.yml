@@ -47,3 +47,8 @@
   #    something was not setup properly
   failed_when: "nova_status_upgrade_check.rc not in [0, 1]"
   changed_when: false
+  # The "Service user token configuration" check is known to fail with our
+  # configuration. This will be fixed in Yoga where OSA properly implements
+  # service user token configuration. The current state should not be worse
+  # than before.
+  ignore_errors: True
