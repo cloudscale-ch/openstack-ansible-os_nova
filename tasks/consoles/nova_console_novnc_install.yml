@@ -59,6 +59,16 @@
   tags:
     - nova-novnc-git
 
+- name: Remove .git leftovers to make vulnerability scanners proud
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - /usr/share/novnc/.git
+    - /usr/share/novnc/.github
+    - /usr/share/novnc/.gitignore
+    - /usr/share/novnc/.gitmodules
+
 - include_tasks: nova_console_novnc_ssl.yml
   when:
     - nova_console_user_ssl_cert is defined
